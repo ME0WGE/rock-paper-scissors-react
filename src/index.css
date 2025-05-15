@@ -23,4 +23,7 @@ body {
 
   min-width: 375px;
   min-height: 100vh;
+
+  /* BackgroundColor */
+  background: linear-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
 }

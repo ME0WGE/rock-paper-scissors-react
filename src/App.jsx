@@ -4,7 +4,13 @@ import GameRules from "./components/gameRules/GameRules";
 import GameSection from "./components/gameSection/GameSection";
 
 function App() {
-  return <></>;
+  return (
+    <>
+      <GameHeader />
+      <GameSection />
+      <GameRules />
+    </>
+  );
 }
 
 export default App;
