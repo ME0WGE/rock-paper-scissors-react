@@ -10,4 +10,10 @@
 
   flex-wrap: wrap;
   max-width: 400px;
+
+  padding: 5rem;
+
+  background-image: url(../../assets/images/bg-triangle.svg);
+  background-repeat: no-repeat;
+  background-position: 50%;
 }
