@@ -1,0 +1,6 @@
+.gamerules-container {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  text-align: center;
+}
