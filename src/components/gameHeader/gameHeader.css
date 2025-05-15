@@ -3,6 +3,8 @@
   justify-content: space-between;
   align-items: center;
 
+  background-color: transparent;
+
   width: 50vw;
 
   outline: 3px solid hsl(217, 16%, 45%);

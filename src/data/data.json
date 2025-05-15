@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Paper",
+    "img": "icon-paper.svg",
+    "borderColor": "hsl(230, 89%, 62%), hsl(230, 89%, 65%)"
+  },
+  {
+    "title": "Scissors",
+    "img": "icon-scissors.svg",
+    "borderColor": "hsl(39, 89%, 49%), hsl(40, 84%, 53%)"
+  },
+  {
+    "title": "Rock",
+    "img": "icon-rock.svg",
+    "borderColor": "hsl(349, 71%, 52%), hsl(349, 70%, 56%)"
+  }
+]

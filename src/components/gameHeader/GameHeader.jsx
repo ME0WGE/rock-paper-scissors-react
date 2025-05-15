@@ -8,7 +8,7 @@ export default function GameHeader() {
     <>
       <div className="header-container">
         <HeaderLogo imageSrc={"logo.svg"} title={"game logo"} />
-        <HeaderScore score={12}/>
+        <HeaderScore score={12} />
       </div>
     </>
   );
