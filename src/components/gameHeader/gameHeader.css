@@ -1,0 +1,12 @@
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 50vw;
+
+  outline: 3px solid hsl(217, 16%, 45%);
+  border-radius: 5px;
+
+  padding: 1rem;
+}

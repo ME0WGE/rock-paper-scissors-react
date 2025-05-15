@@ -1,0 +1,24 @@
+.score-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  background-color: white;
+
+  width: 200px;
+
+  border-radius: 5px;
+
+  font-size: 4rem;
+}
+.p-score {
+  margin: 0;
+  font-size: 2rem;
+
+  color: hsl(229, 64%, 46%);
+}
+.span-score {
+  margin: 0;
+
+  color: hsl(229, 25%, 31%);
+}
