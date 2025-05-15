@@ -21,6 +21,6 @@ body {
   place-items: center;
   place-content: center;
 
-  min-width: 320px;
+  min-width: 375px;
   min-height: 100vh;
 }
