@@ -117,14 +117,17 @@
 
 .choice-circle.rock {
   border: 15px solid hsl(349, 71%, 52%);
+  box-shadow: 0px 5px 0px 2px rgba(0, 0, 0, 0.25) inset;
 }
 
 .choice-circle.paper {
   border: 15px solid hsl(230, 89%, 62%);
+  box-shadow: 0px 5px 0px 2px rgba(0, 0, 0, 0.25) inset;
 }
 
 .choice-circle.scissors {
   border: 15px solid hsl(39, 89%, 49%);
+  box-shadow: 0px 5px 0px 2px rgba(0, 0, 0, 0.25) inset;
 }
 
 .result-column {
