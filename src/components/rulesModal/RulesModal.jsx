@@ -7,16 +7,16 @@ export default function RulesModal({ onClose }) {
   ).href;
   const altText = `image of rules`;
 
-  // Handler for clicks on the overlay
   const handleOverlayClick = (e) => {
-    // Close only if clicking directly on the overlay (not modal content)
+    // Fermer le modal si click en dehors du modal
     if (e.target.classList.contains("modal-overlay")) {
-      {onClose};
+      onClose(e);
     }
   };
+
   return (
     <div className="modal-overlay" onClick={handleOverlayClick}>
-      <div className="modal-box">
+      <div className="modal-box" onClick={(e) => e.stopPropagation()}>
         <div className="modal-header">
           <h2>Rules</h2>
           <button className="close-button" onClick={onClose}>

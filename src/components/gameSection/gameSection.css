@@ -9,11 +9,134 @@
   gap: 5rem;
 
   flex-wrap: wrap;
-  max-width: 400px;
+  max-width: 700px;
 
   padding: 5rem;
 
   background-image: url(../../assets/images/bg-triangle.svg);
   background-repeat: no-repeat;
   background-position: 50%;
+}
+
+.result-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 30px auto;
+  max-width: 800px;
+
+  color: white;
+
+  position: relative;
+}
+
+.score-label {
+  font-size: 16px;
+  letter-spacing: 2px;
+
+  color: #2a46c0;
+
+  font-weight: bold;
+}
+
+.choices-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 100%;
+
+  margin-top: 80px;
+}
+
+.choice-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 20px;
+}
+
+.choice-label {
+  font-size: 18px;
+  letter-spacing: 1px;
+
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.choice-circle {
+  width: 150px;
+  height: 150px;
+
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: white;
+
+  position: relative;
+}
+
+.choice-circle img {
+  width: 60%;
+  height: 60%;
+
+  object-fit: contain;
+}
+
+.choice-circle.rock {
+  border: 15px solid hsl(349, 71%, 52%);
+}
+
+.choice-circle.paper {
+  border: 15px solid hsl(230, 89%, 62%);
+}
+
+.choice-circle.scissors {
+  border: 15px solid hsl(39, 89%, 49%);
+}
+
+.result-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 20px;
+}
+
+.result-text {
+  font-size: 36px;
+  font-weight: bold;
+
+  margin-bottom: 20px;
+}
+
+.play-again-btn {
+  background-color: white;
+
+  border: none;
+  border-radius: 8px;
+
+  padding: 12px 24px;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  color: #3b4363;
+  cursor: pointer;
+  letter-spacing: 2px;
+
+  transition: all 0.2s;
+}
+
+.play-again-btn:hover {
+  background-color: #f8f8f8;
+
+  transform: scale(1.05);
+
+  color: red;
 }

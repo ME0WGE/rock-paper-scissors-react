@@ -3,12 +3,12 @@ import HeaderScore from "../headerScore/HeaderScore";
 
 import "./gameHeader.css";
 
-export default function GameHeader() {
+export default function GameHeader({ score }) {
   return (
     <>
       <div className="header-container">
         <HeaderLogo imageSrc={"logo.svg"} title={"game logo"} />
-        <HeaderScore score={12} />
+        <HeaderScore score={score} />
       </div>
     </>
   );
