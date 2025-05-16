@@ -7,18 +7,22 @@
 
   width: 200px;
 
-  border-radius: 5px;
+  border-radius: 10px;
 
   font-size: 4rem;
 }
 .p-score {
   margin: 0;
+
   font-size: 2rem;
+  font-weight: 500;
 
   color: hsl(229, 64%, 46%);
 }
 .span-score {
   margin: 0;
+
+  font-weight: 500;
 
   color: hsl(229, 25%, 31%);
 }
