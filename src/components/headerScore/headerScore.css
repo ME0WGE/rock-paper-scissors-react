@@ -22,3 +22,10 @@
 
   color: hsl(229, 25%, 31%);
 }
+@media (max-width: 800px) {
+  .score-container {
+    font-size: 2rem;
+
+    width: 150px;
+  }
+}

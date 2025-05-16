@@ -1,3 +1,8 @@
 .logo-img {
   width: 250px;
 }
+@media (max-width: 800px) {
+  .logo-img {
+    width: 125px;
+  }
+}
