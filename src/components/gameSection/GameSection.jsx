@@ -93,7 +93,7 @@ export default function GameSection({ updateScore }) {
                   src={
                     new URL(
                       `../../assets/images/${
-                        data.find((item) => item.title === userChoice)?.img
+                        data.find((item) => item.title === userChoice).img
                       }`,
                       import.meta.url
                     ).href
@@ -117,7 +117,7 @@ export default function GameSection({ updateScore }) {
                   src={
                     new URL(
                       `../../assets/images/${
-                        data.find((item) => item.title === computerChoice)?.img
+                        data.find((item) => item.title === computerChoice).img
                       }`,
                       import.meta.url
                     ).href
