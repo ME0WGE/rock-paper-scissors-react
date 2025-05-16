@@ -19,7 +19,7 @@
 }
 
 @media (max-width: 800px) {
-  .gamesection-container{
+  .gamesection-container {
     max-width: 700px;
 
     background-position: 50% 60%;
@@ -39,6 +39,11 @@
 
   position: relative;
 }
+@media (max-width: 800px) {
+  .result-screen {
+    margin: 20% auto;
+  }
+}
 
 .score-label {
   font-size: 16px;
@@ -57,8 +62,13 @@
   width: 100%;
 
   gap: 4rem;
+}
+@media (max-width: 800px) {
+  .choices-container {
+    gap: 1rem;
 
-  margin-top: 80px;
+    flex-direction: column;
+  }
 }
 
 .choice-column {
@@ -90,6 +100,12 @@
   background-color: white;
 
   position: relative;
+}
+@media (max-width: 800px) {
+  .choice-circle {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 .choice-circle img {
