@@ -1,5 +1,5 @@
-import GameCard from "../gameCard/GameCard";
 import "./gameSection.css";
+import GameCard from "../gameCard/GameCard";
 import data from "../../data/data.json";
 
 export default function GameSection() {

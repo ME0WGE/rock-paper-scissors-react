@@ -52,6 +52,8 @@
 
   font-size: 1.2rem;
   cursor: pointer;
+
+  opacity: 50%;
 }
 
 .modal-content img {

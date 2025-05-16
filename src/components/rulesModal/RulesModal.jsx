@@ -6,8 +6,16 @@ export default function RulesModal({ onClose }) {
     import.meta.url
   ).href;
   const altText = `image of rules`;
+
+  // Handler for clicks on the overlay
+  const handleOverlayClick = (e) => {
+    // Close only if clicking directly on the overlay (not modal content)
+    if (e.target.classList.contains("modal-overlay")) {
+      {onClose};
+    }
+  };
   return (
-    <div className="modal-overlay">
+    <div className="modal-overlay" onClick={handleOverlayClick}>
       <div className="modal-box">
         <div className="modal-header">
           <h2>Rules</h2>
