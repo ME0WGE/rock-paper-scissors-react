@@ -17,6 +17,16 @@
   background-repeat: no-repeat;
   background-position: 50%;
 }
+@media (max-width: 1200px) {
+  .gamesection-container {
+    max-width: 400px;
+
+    background-position: 50% 60%;
+    background-size: 50%;
+    padding: 2rem;
+    gap: 2rem;
+  }
+}
 
 @media (max-width: 800px) {
   .gamesection-container {
@@ -44,7 +54,7 @@
     margin-top: 1rem;
     margin-bottom: 0 !important;
   }
-  .result-text{
+  .result-text {
     margin-bottom: 0 !important;
     font-weight: 900 !important;
     margin-top: 1rem !important;
