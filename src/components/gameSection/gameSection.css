@@ -63,46 +63,101 @@
 
 @media (max-width: 430px) {
   .gamesection-container {
-    max-width: 200px !important;
-
-    background-position: 50% 60% !important;
-    background-size: 50% !important;
-    padding: 2rem !important;
-    gap: 2rem !important;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    background-position: 50% 40%; /* Ajuste la position du triangle */
+    background-size: 30%; /* Ajuste la taille du triangle */
   }
   .choices-container {
-    flex-direction: column-reverse !important;
-    align-items: center !important;
-    gap: 0rem !important;
-    width: 100% !important;
+    position: relative !important;
+    width: 180px !important;
+    height: 160px !important;
+    margin: 0 auto !important;
+    display: block !important;
+    gap: 0 !important;
   }
   .choice-circle {
+    position: absolute !important;
     width: 60px !important;
     height: 60px !important;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-width: 8px !important;
+    border-style: solid !important;
+    border-radius: 50% !important;
+    background: white !important;
+    cursor: pointer !important;
   }
-  .result-screen {
+  /* Paper en haut à gauche */
+  .choice-circle.paper {
+    left: 0 !important;
+    top: 0 !important;
+    transform: none !important;
+  }
+  /* Scissors en haut à droite */
+  .choice-circle.scissors {
+    right: 0 !important;
+    top: 0 !important;
+    left: auto !important;
+    transform: none !important;
+  }
+  /* Rock centré en bas */
+  .choice-circle.rock {
+    left: 50% !important;
+    bottom: 0 !important;
+    right: auto !important;
+    top: auto !important;
+    transform: translateX(-50%) !important;
+  }
+  .result-screen .choices-container {
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    display: flex !important;
+    flex-direction: column-reverse !important;
+    align-items: center !important;
+    gap: 2rem !important;
+  }
+  .result-screen .choices-container {
     flex-direction: column !important;
-    margin: 5% auto 0 auto !important;
-    max-width: 98vw !important;
-    padding: 0rem !important;
+    align-items: center !important;
+    gap: 2rem !important;
+  }
+  .result-screen .choice-circle {
+    position: static !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    width: 80px !important;
+    height: 80px !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
   .result-column {
+    order: 2 !important;
     margin: 1rem 0 !important;
   }
-  .play-again-btn {
-    width: 40vw !important;
-    max-width: 100% !important;
-    margin: 0rem auto 0 auto !important;
-    display: block !important;
+  .choice-column:first-child {
+    order: 3 !important; /* YOU PICKED en bas */
   }
-  .choice-label {
-    margin-top: 0rem !important;
-    margin-bottom: 0 !important;
+  .result-column {
+    order: 2 !important; /* Résultat au centre */
   }
-  .result-text {
-    margin-bottom: 0 !important;
-    font-weight: 900 !important;
-    margin-top: 0rem !important;
+  .choice-column:last-child {
+    order: 1 !important; /* HOUSE PICKED en haut */
   }
 }
 

@@ -12,7 +12,14 @@ export default function GameSection({ updateScore }) {
 
   const choices = ["Rock", "Paper", "Scissors"];
 
-  // Quand le score local change, mettre à jour le score global
+  // Responsive state for mobile
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 430);
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 430);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   useEffect(() => {
     if (updateScore) {
       updateScore(localScore);
@@ -20,49 +27,30 @@ export default function GameSection({ updateScore }) {
   }, [localScore, updateScore]);
 
   const determineWinner = (user, computer) => {
-    if (user === computer) {
-      return "DRAW";
-    }
-
+    if (user === computer) return "DRAW";
     if (
-      // Vérifie si le joueur a gagné
       (user === "Rock" && computer === "Scissors") ||
       (user === "Paper" && computer === "Rock") ||
       (user === "Scissors" && computer === "Paper")
     ) {
       return "YOU WIN";
     }
-    // Le joueur a perdu
     return "YOU LOSE";
   };
 
   const handleUserChoice = (choice) => {
-    // Choisir aléatoirement pour l'ordinateur
     const computerRandomChoice =
       choices[Math.floor(Math.random() * choices.length)];
-
     setUserChoice(choice);
     setComputerChoice(computerRandomChoice);
-
-    // Déterminer le résultat
     const gameResult = determineWinner(choice, computerRandomChoice);
     setResult(gameResult);
-
-    if (gameResult === "YOU WIN") {
-      // Mettre à jour le score quand le joueur a gagné
-      setLocalScore((prevScore) => prevScore + 1);
-    }
-    if (gameResult === "YOU LOSE") {
-      // Mettre à jour le score quand le joueur a perdu
-      setLocalScore((prevScore) => prevScore - 1);
-    }
-
-    // Afficher l'écran de résultat
+    if (gameResult === "YOU WIN") setLocalScore((prev) => prev + 1);
+    if (gameResult === "YOU LOSE") setLocalScore((prev) => prev - 1);
     setShowResult(true);
   };
 
   const playAgain = () => {
-    // Réinitialiser les valeurs par défaut
     setShowResult(false);
     setUserChoice(null);
     setComputerChoice(null);
@@ -73,27 +61,62 @@ export default function GameSection({ updateScore }) {
     <>
       {!showResult ? (
         <div className="gamesection-container">
-          {data.map((card, index) => (
-            <GameCard
-              key={index}
-              title={card.title}
-              imageSrc={card.img}
-              borderColor={card.borderColor}
-              onCardClick={handleUserChoice}
-            />
-          ))}
+          {isMobile ? (
+            <div className="choices-container">
+              <div
+                className="choice-circle paper"
+                onClick={() => handleUserChoice("Paper")}
+                style={{ borderColor: data[0].borderColor }}
+              >
+                <img
+                  src={new URL(`../../assets/images/${data[0].img}`, import.meta.url).href}
+                  alt="Paper"
+                />
+              </div>
+              <div
+                className="choice-circle scissors"
+                onClick={() => handleUserChoice("Scissors")}
+                style={{ borderColor: data[1].borderColor }}
+              >
+                <img
+                  src={new URL(`../../assets/images/${data[1].img}`, import.meta.url).href}
+                  alt="Scissors"
+                />
+              </div>
+              <div
+                className="choice-circle rock"
+                onClick={() => handleUserChoice("Rock")}
+                style={{ borderColor: data[2].borderColor }}
+              >
+                <img
+                  src={new URL(`../../assets/images/${data[2].img}`, import.meta.url).href}
+                  alt="Rock"
+                />
+              </div>
+            </div>
+          ) : (
+            data.map((card, index) => (
+              <GameCard
+                key={index}
+                title={card.title}
+                imageSrc={card.img}
+                borderColor={card.borderColor}
+                onCardClick={handleUserChoice}
+              />
+            ))
+          )}
         </div>
       ) : (
         <div className="result-screen">
           <div className="choices-container">
             <div className="choice-column">
               <div className="choice-label">YOU PICKED</div>
-              <div className={`choice-circle ${userChoice.toLowerCase()}`}>
+              <div className={`choice-circle ${userChoice?.toLowerCase()}`}>
                 <img
                   src={
                     new URL(
                       `../../assets/images/${
-                        data.find((item) => item.title === userChoice).img
+                        data.find((item) => item.title === userChoice)?.img
                       }`,
                       import.meta.url
                     ).href
@@ -112,12 +135,12 @@ export default function GameSection({ updateScore }) {
 
             <div className="choice-column">
               <div className="choice-label">THE HOUSE PICKED</div>
-              <div className={`choice-circle ${computerChoice.toLowerCase()}`}>
+              <div className={`choice-circle ${computerChoice?.toLowerCase()}`}>
                 <img
                   src={
                     new URL(
                       `../../assets/images/${
-                        data.find((item) => item.title === computerChoice).img
+                        data.find((item) => item.title === computerChoice)?.img
                       }`,
                       import.meta.url
                     ).href
