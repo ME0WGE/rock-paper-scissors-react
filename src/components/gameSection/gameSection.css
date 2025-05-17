@@ -40,7 +40,7 @@
   .choices-container {
     gap: 0rem !important;
 
-    flex-direction: column-reverse;
+    flex-direction: column-reverse !important;
   }
   .choice-circle {
     width: 80px !important;
@@ -51,7 +51,7 @@
     max-width: 98vw;
   }
   .choice-label {
-    margin-top: 1rem;
+    margin-top: 1rem !important;
     margin-bottom: 0 !important;
   }
   .result-text {
@@ -63,37 +63,46 @@
 
 @media (max-width: 430px) {
   .gamesection-container {
-    max-width: 200px;
+    max-width: 200px !important;
 
-    background-position: 50% 60%;
-    background-size: 50%;
-    padding: 2rem;
-    gap: 2rem;
+    background-position: 50% 60% !important;
+    background-size: 50% !important;
+    padding: 2rem !important;
+    gap: 2rem !important;
   }
   .choices-container {
-    flex-direction: column-reverse;
-    align-items: center;
-    gap: 1rem;
-    width: 100%;
+    flex-direction: column-reverse !important;
+    align-items: center !important;
+    gap: 0rem !important;
+    width: 100% !important;
   }
   .choice-circle {
-    width: 60px;
-    height: 60px;
+    width: 60px !important;
+    height: 60px !important;
   }
   .result-screen {
-    flex-direction: column;
-    margin: 10% auto 0 auto;
-    max-width: 98vw;
-    padding: 0.5rem;
+    flex-direction: column !important;
+    margin: 5% auto 0 auto !important;
+    max-width: 98vw !important;
+    padding: 0rem !important;
   }
   .result-column {
-    margin: 1rem 0;
+    margin: 1rem 0 !important;
   }
   .play-again-btn {
-    width: 90vw;
-    max-width: 300px;
-    margin: 1rem auto 0 auto;
-    display: block;
+    width: 40vw !important;
+    max-width: 100% !important;
+    margin: 0rem auto 0 auto !important;
+    display: block !important;
+  }
+  .choice-label {
+    margin-top: 0rem !important;
+    margin-bottom: 0 !important;
+  }
+  .result-text {
+    margin-bottom: 0 !important;
+    font-weight: 900 !important;
+    margin-top: 0rem !important;
   }
 }
 
