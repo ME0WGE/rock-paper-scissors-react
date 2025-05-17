@@ -5,11 +5,13 @@
 
   background-color: white;
 
-  width: 200px;
+  width: 300px;
 
   border-radius: 10px;
 
   font-size: 3rem;
+
+  padding: 0.7rem;
 }
 .p-score {
   margin: 0;
@@ -26,10 +28,48 @@
 
   color: hsl(229, 25%, 31%);
 }
+
+@media (max-width: 1200px) {
+  .score-container {
+    font-size: 2.5rem;
+
+    width: 180px;
+    padding: 0.7rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .score-container {
+    font-size: 2.5rem;
+
+    width: 250px;
+    padding: 0.7rem;
+  }
+}
+
 @media (max-width: 800px) {
   .score-container {
     font-size: 2rem;
 
-    width: 150px;
+    width: 35vw;
+    padding: 0.5rem;
+  }
+  .p-score {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .score-container {
+    font-size: 1.2rem;
+    width: 35vw;
+    padding: 0.3rem;
+    border-radius: 7px;
+  }
+  .p-score {
+    font-size: 1rem;
+  }
+  .span-score {
+    font-size: 1.2rem;
   }
 }
