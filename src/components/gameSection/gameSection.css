@@ -40,6 +40,15 @@
     margin: 20% auto;
     max-width: 98vw;
   }
+  .choice-label {
+    margin-top: 1rem;
+    margin-bottom: 0 !important;
+  }
+  .result-text{
+    margin-bottom: 0 !important;
+    font-weight: 900 !important;
+    margin-top: 1rem !important;
+  }
 }
 
 @media (max-width: 430px) {
@@ -173,7 +182,7 @@
 
 .result-text {
   font-size: 36px;
-  font-weight: bold;
+  font-weight: 900;
 
   margin-bottom: 20px;
 }
