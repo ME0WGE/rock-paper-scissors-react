@@ -28,13 +28,13 @@
     gap: 2rem;
   }
   .choices-container {
-    gap: 1rem;
+    gap: 0rem !important;
 
     flex-direction: column-reverse;
   }
   .choice-circle {
-    width: 80px;
-    height: 80px;
+    width: 80px !important;
+    height: 80px !important;
   }
   .result-screen {
     margin: 20% auto;
