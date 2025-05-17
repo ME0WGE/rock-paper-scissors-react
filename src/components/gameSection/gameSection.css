@@ -20,19 +20,61 @@
 
 @media (max-width: 800px) {
   .gamesection-container {
-    max-width: 700px;
+    max-width: 200px;
 
     background-position: 50% 60%;
-    background-size: 55%;
+    background-size: 50%;
+    padding: 2rem;
+    gap: 2rem;
+  }
+  .choices-container {
+    gap: 1rem;
+
+    flex-direction: column-reverse;
+  }
+  .choice-circle {
+    width: 80px;
+    height: 80px;
+  }
+  .result-screen {
+    margin: 20% auto;
+    max-width: 98vw;
   }
 }
+
 @media (max-width: 430px) {
   .gamesection-container {
-    flex-wrap: wrap;
-    max-width: 600px;
+    max-width: 200px;
 
     background-position: 50% 60%;
-    background-size: 55%;
+    background-size: 50%;
+    padding: 2rem;
+    gap: 2rem;
+  }
+  .choices-container {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+  }
+  .choice-circle {
+    width: 60px;
+    height: 60px;
+  }
+  .result-screen {
+    flex-direction: column;
+    margin: 10% auto 0 auto;
+    max-width: 98vw;
+    padding: 0.5rem;
+  }
+  .result-column {
+    margin: 1rem 0;
+  }
+  .play-again-btn {
+    width: 90vw;
+    max-width: 300px;
+    margin: 1rem auto 0 auto;
+    display: block;
   }
 }
 
@@ -47,11 +89,6 @@
   color: white;
 
   position: relative;
-}
-@media (max-width: 800px) {
-  .result-screen {
-    margin: 20% auto;
-  }
 }
 
 .score-label {
@@ -71,13 +108,6 @@
   width: 100%;
 
   gap: 4rem;
-}
-@media (max-width: 800px) {
-  .choices-container {
-    gap: 1rem;
-
-    flex-direction: column-reverse;
-  }
 }
 
 .choice-column {
@@ -109,12 +139,6 @@
   background-color: white;
 
   position: relative;
-}
-@media (max-width: 800px) {
-  .choice-circle {
-    width: 50px;
-    height: 50px;
-  }
 }
 
 .choice-circle img {
