@@ -130,7 +130,7 @@
   .result-screen .choices-container {
     flex-direction: column !important;
     align-items: center !important;
-    gap: 2rem !important;
+    gap: 1rem !important;
   }
   .result-screen .choice-circle {
     position: static !important;
@@ -148,7 +148,7 @@
   }
   .result-column {
     order: 2 !important;
-    margin: 1rem 0 !important;
+    margin: 0.5rem 0 !important;
   }
   .choice-column:first-child {
     order: 3 !important; /* YOU PICKED en bas */
@@ -285,4 +285,20 @@
   transform: scale(1.05);
 
   color: red;
+}
+
+body {
+  min-height: 100dvh !important;
+  width: 100vw !important;
+  box-sizing: border-box !important;
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
+  overflow-x: hidden !important;
+}
+
+html,
+body {
+  width: 100% !important;
+  max-width: 100vw !important;
+  overflow-x: hidden !important;
 }
