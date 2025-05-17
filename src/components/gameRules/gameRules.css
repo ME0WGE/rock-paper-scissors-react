@@ -5,23 +5,27 @@
   text-align: center;
   width: 100%;
   margin-top: 2rem;
+  background: transparent !important;
 }
 @media (max-width: 1200px) {
   .gamerules-container {
     justify-content: center;
     margin-top: 2rem;
+    background: transparent !important;
   }
 }
 @media (max-width: 1000px) {
   .gamerules-container {
     justify-content: center;
     margin-top: 2rem;
+    background: transparent !important;
   }
 }
 @media (max-width: 800px) {
   .gamerules-container {
     justify-content: center;
     margin-top: 1.5rem;
+    background: transparent !important;
   }
 }
 
@@ -30,5 +34,6 @@
     justify-content: center;
     margin-top: 1rem;
     width: 100vw;
+    background: transparent !important;
   }
 }
