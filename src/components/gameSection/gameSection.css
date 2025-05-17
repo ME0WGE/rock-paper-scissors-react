@@ -18,7 +18,7 @@
   background-position: 50%;
 }
 
-@media (min-width: 800px) {
+@media (max-width: 800px) {
   .gamesection-container {
     max-width: 700px;
 
