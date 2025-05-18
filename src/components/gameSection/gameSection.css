@@ -151,13 +151,13 @@
     margin: 0.5rem 0 !important;
   }
   .choice-column:first-child {
-    order: 3 !important; /* Placer YOU PICKED en bas */
+    order: 3 !important; /* YOU PICKED en bas */
   }
   .result-column {
-    order: 2 !important; /* Placer Résultat au centre */
+    order: 2 !important; /* Résultat au centre */
   }
   .choice-column:last-child {
-    order: 1 !important; /* Placer HOUSE PICKED en haut */
+    order: 1 !important; /* HOUSE PICKED en haut */
   }
 }
 
